@@ -1,0 +1,15 @@
+{
+    "name": "clordle",
+    "version": "0.0.0",
+    "description": "If wordle and the command line had a baby.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node cli.js"
+    },
+    "author": "Piero Maddaleni <piero@piemadd.com>",
+    "license": "ISC",
+    "dependencies": {
+        "ansi-colors": "4.1.1",
+        "enquirer": "2.3.6"
+    }
+}
