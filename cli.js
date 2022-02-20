@@ -26,8 +26,11 @@ let clordleGame = new clordle();
 
 //console.log(clordleGame);
 
-console.log("Today's date: " + new Date().toLocaleDateString())
-console.log('')
+console.log("Welcome to Clordle, the command-line wordle clone!");
+console.log('');
+
+console.log("Today's date: " + new Date().toLocaleDateString());
+console.log('');
 
 for (let i = 0; i < 5; i++) {
     let readableGuessNum = i + 1;
