@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const clordle = require('./clordle').lib;
 const { Snippet } = require('enquirer');
 const c = require('ansi-colors');
@@ -23,6 +25,9 @@ const prettyPrintRemaining = ((clordleGameSession) => {
 let clordleGame = new clordle();
 
 //console.log(clordleGame);
+
+console.log("Today's date: " + new Date().toLocaleDateString())
+console.log('')
 
 for (let i = 0; i < 5; i++) {
     let readableGuessNum = i + 1;
@@ -67,6 +72,7 @@ const promptThingy = ((guessNum = 0) => {
             let lastGuess = '';
             let result = clordleGame.processGuess(answer.result);
             //console.log(result)
+            //console.log(clordleGame);
             for (let i = 0; i < result.length; i++) {
                 if (result[i].isCorrect) {
                     lastGuess += c.bgGreen(result[i].character);
@@ -79,7 +85,14 @@ const promptThingy = ((guessNum = 0) => {
     
             if (clordleGame.word == answer.result.toUpperCase()) {
                 console.log(`Previous Guess: ${lastGuess}`);
-                console.log(c.green(`Yay you got the word in ${guessNum + 1} trie(s)!`));
+
+                if (guessNum == 0) {
+                    console.log(c.green('Yay you got the word in 1 try!'));
+                } else {
+                    console.log(c.green(`Yay you got the word in ${guessNum + 1} tries!`));
+                }
+                
+                
             } else {
                 console.log(`Previous Guess: ${lastGuess}`);
                 promptThingy(guessNum + 1);

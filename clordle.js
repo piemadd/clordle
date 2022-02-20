@@ -1,8 +1,8 @@
 const { words } = require('./words');
 
 const clordle = class {
-    constructor(word = words[Math.floor((new Date().getTime() - new Date("06/29/2021").getTime()) / (1000 * 3600 * 24))], day = -1) { //the default word value aligns with the real wordle guesses. will break sometime in 2027 but 24 y/o me will deal with that
-
+    constructor(word = words[Math.floor((new Date().getTime() - new Date("06/19/2021").getTime()) / (1000 * 3600 * 24))], day = -1) { //the default word value aligns with the real wordle guesses. will break sometime in 2027 but 24 y/o me will deal with that
+        
         if (day >= 0) {
             word = words[day];
         }
