@@ -7,7 +7,7 @@ const clordle = class {
             word = words[day];
         }
 
-        console.log(word)
+        //console.log(word)
         
         this.word = word;
         this.wordSplit = this.word.split('');

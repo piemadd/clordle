@@ -1,6 +1,6 @@
 {
     "name": "clordle",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "If wordle and the command line had a baby.",
     "main": "index.js",
     "scripts": {
