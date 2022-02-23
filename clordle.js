@@ -6,6 +6,8 @@ const clordle = class {
         if (day >= 0) {
             word = words[day];
         }
+
+        console.log(word)
         
         this.word = word;
         this.wordSplit = this.word.split('');
